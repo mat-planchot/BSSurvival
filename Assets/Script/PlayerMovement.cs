@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", Mathf.Abs(movement.y));
         else if (Mathf.Abs(movement.x) == 0 && (Mathf.Abs(movement.y) == 0))
             animator.SetFloat("Speed", 0);
+
+        if (Input.GetButtonDown("Fire1")) {
+            animator.SetBool("IsShooting", true);
+        }
     }
 
     void FixedUpdate() {
