@@ -2,7 +2,7 @@
 
 Le but de ce jeu solo à la fois beat them up et shoot them all est de survivre à l’attaque de monstres. 
 
-![BSSurvival](https://photos.app.goo.gl/B2CzKdPWxkS3GXg37)
+![BSSurvival](Assets/Scenes/BSSurvival.png)
 
 A la suite d’une invasion alien, la terre se trouve envahit de formes extraterrestres intelligentes. 
 Vous êtes un des rescapés de cette invasion et votre but est de survivre en évitant les coups, les tirs ou en ripostant. 
