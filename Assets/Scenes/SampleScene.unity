@@ -341,6 +341,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &270848858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830540050878193653, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
+  m_PrefabInstance: {fileID: 1830540050612505408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &270848865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270848858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02533b01636af4dd1a76fe08346f2df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
+  deathEffect: {fileID: 3299115274649385152, guid: 3681b9f33fc504e449d8dccb93da5287, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1449,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1830540050878193653, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830540050878193653, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -1476,6 +1499,10 @@ PrefabInstance:
     - target: {fileID: 1830540050878193658, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830540051345166315, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0423ac03ee0f74242b056903852c5568, type: 3}
@@ -1600,10 +1627,19 @@ PrefabInstance:
       value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 8962261518622549115, guid: 009fd508d443e4c699296700a9b99bbb, type: 3}
+      propertyPath: attackRange
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962261518622549115, guid: 009fd508d443e4c699296700a9b99bbb, type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 3299115274649385152, guid: 3681b9f33fc504e449d8dccb93da5287, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 8962261518622549115, guid: 009fd508d443e4c699296700a9b99bbb, type: 3}
+      propertyPath: attackMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5584500290139901883, guid: 009fd508d443e4c699296700a9b99bbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 009fd508d443e4c699296700a9b99bbb, type: 3}
 --- !u!1001 &8144900691293101044
 PrefabInstance:

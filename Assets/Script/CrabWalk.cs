@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrabWalk : StateMachineBehaviour
 {
     public float speed = 1f;
+    public float attackRange = 0.8f;
     Transform player;
     Rigidbody2D rb;
 
@@ -22,12 +23,17 @@ public class CrabWalk : StateMachineBehaviour
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
+
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+		{
+			animator.SetTrigger("Attack");
+		}
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       
+       animator.ResetTrigger("Attack");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
