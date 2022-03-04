@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 300;
 
     public GameObject deathEffect;
+	public Text hpText;
 
+	void Update() 
+	{
+		hpText.text = health.ToString();
+	}
     public void TakeDamage(int damage) 
     {
         health -= damage;
@@ -22,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
         GameObject clone = (GameObject) Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(clone, 0.6f);
         Destroy(gameObject);
+		NextLevel.hasWin = false;
+		SceneManager.LoadScene(0);
     }
 
     IEnumerator DamageAnimation()

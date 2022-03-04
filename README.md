@@ -13,4 +13,4 @@ Chaque début de pallier sera récompensé de loots en forme d’objets pour com
 Les aliens sont de plusieurs types : 
 - les octopus aliens qui tirent des rayons laser
 - les crab aliens qui se battent au corps à corps 
-- les jumper aliens tirent des dards
+- les jumper aliens tirent de l'acide

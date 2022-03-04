@@ -1,7 +1,6 @@
 # TODO
 
 - player in front of or behind enemies
-- you lose menu
 - start over
 - continue with increased difficulty 
 - increase enemies health and speed
@@ -25,3 +24,5 @@
 - layer wall and bullet
 - new scene with new background
 - transition to next stage
+- HP player
+- menu UI continue button
