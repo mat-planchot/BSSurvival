@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletEnemy : MonoBehaviour
+public class BulletAcid : MonoBehaviour
 {
-    public float speed = -10f;
+    public float speed = 10f;
     public Rigidbody2D rb;
     public int damage = 30;
     public GameObject impactEffect;
