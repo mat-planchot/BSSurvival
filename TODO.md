@@ -2,11 +2,8 @@
 
 - new scene with new background
 - transition to next stage
-- attack animation
-- limit attack speed
-- bullet to the up
+- layer or mask for bullet
 - octopus eyes laser
-- jumper dart
 - player in front of or behind enemies
 - start over
 - you lose menu
@@ -22,3 +19,7 @@
 
 - takeDamage player
 - death animation
+- attack animation
+- limit attack speed
+- jumper dart
+- bullet to the up

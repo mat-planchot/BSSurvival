@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
+    public Transform firePointUp;
     public GameObject bullet;
     public float shotRate = 2f;
     float nextShotTime = 0f;
@@ -23,6 +24,10 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
+        if (!Bullet.isBulletHorizontal) {
+            Instantiate(bullet, firePointUp.position, firePointUp.rotation);
+        } else {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+        }
     }
 }

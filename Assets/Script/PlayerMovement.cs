@@ -23,8 +23,13 @@ public class PlayerMovement : MonoBehaviour
         else if (Mathf.Abs(movement.x) == 0 && (Mathf.Abs(movement.y) == 0))
             animator.SetFloat("Speed", 0);
 
-        if (Input.GetButtonDown("Fire1")) {
-            animator.SetBool("IsShooting", true);
+        if (Input.GetButtonDown("Space")) {
+            animator.SetBool("IsShootingUp", true);
+            Bullet.isBulletHorizontal = false;
+        }
+        if (Input.GetButtonUp("Space")){
+            animator.SetBool("IsShootingUp", false);
+            Bullet.isBulletHorizontal = true;
         }
     }
 

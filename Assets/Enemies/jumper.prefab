@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1826722799127290996}
   - component: {fileID: 3266349750783837273}
   m_Layer: 6
-  m_Name: jumper
+  m_Name: Jumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,4 +187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  attackDamage: 40
   deathEffect: {fileID: 3299115274649385152, guid: 3681b9f33fc504e449d8dccb93da5287, type: 3}
+  attackOffset: {x: 0, y: 0, z: 0}
+  attackRange: 0
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 0

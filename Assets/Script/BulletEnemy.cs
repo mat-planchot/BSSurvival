@@ -2,28 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletEnemy : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = -10f;
     public Rigidbody2D rb;
-    public int damage = 40;
+    public int damage = 30;
     public GameObject impactEffect;
-    public static bool isBulletHorizontal = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (!isBulletHorizontal) { 
-            rb.velocity = transform.up * speed; 
-        } else {
-            rb.velocity = transform.right * speed;
-        }
+        rb.velocity = transform.up * speed;
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null) {
-            enemy.TakeDamage(damage);
+        PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
+        if (player != null) {
+            player.TakeDamage(damage);
         }
         GameObject clone = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(clone, 0.3f);
