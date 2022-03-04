@@ -14,7 +14,11 @@ public class NextLevel : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo) {
         PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
         if (player != null) {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+            if (SceneManager.GetActiveScene().name == "SecondScene") {
+                SceneManager.LoadScene(0);
+            } else {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+            }
         }
     }
 }
