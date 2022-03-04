@@ -13,10 +13,10 @@ TagManager:
   - UI
   - enemies
   - player
-  - 
-  - 
-  - 
-  - 
+  - bullet
+  - bulletE
+  - invisibleWall
+  - wallBulletE
   - 
   - 
   - 
