@@ -1,25 +1,27 @@
 # TODO
 
-- new scene with new background
-- transition to next stage
-- layer or mask for bullet
-- octopus eyes laser
 - player in front of or behind enemies
-- start over
 - you lose menu
+- start over
 - continue with increased difficulty 
 - increase enemies health and speed
 - instantiate enemies randomely
 - drop health items
 - choose to continue with +100 health, more attack power, more defense 
-- crouch animation
-- jump animation
 
 # Done
 
+- player movement
+- bullet player
+- sprite animation
+- moving enemy
 - takeDamage player
-- death animation
-- attack animation
+- impact and death animation
+- crab attack animation
 - limit attack speed
-- jumper dart
+- "Jumper" acid attack
 - bullet to the up
+- "Octopus" laser beam
+- layer wall and bullet
+- new scene with new background
+- transition to next stage
