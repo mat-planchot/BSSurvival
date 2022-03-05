@@ -4,6 +4,8 @@ Le but de ce jeu solo à la fois beat them up et shoot them all est de survivre 
 
 ![BSSurvival](Assets/Scenes/BSSurvival.png)
 
+https://play.unity.com/mg/other/webgl-builds-159681
+
 A la suite d’une invasion alien, la terre se trouve envahit de formes extraterrestres intelligentes. 
 Vous êtes un des rescapés de cette invasion et votre but est de survivre en évitant les coups, les tirs ou en ripostant. 
 
