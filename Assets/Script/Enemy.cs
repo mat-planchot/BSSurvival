@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
+    public static int healthStatic = 100;
     public int attackDamage = 40;
     public GameObject deathEffect;
     public Vector3 attackOffset;
     public float attackRange;
     public LayerMask attackMask;
+    public Text hpText;
 
     void Start() {
 		if (NextLevel.hasWin) {
-			health += 10;
+            health = healthStatic;
             attackDamage += 5;
-		} else if (!NextLevel.hasWin) {
-            attackDamage = 40;
-        }
+		}
+	}
+    void Update() 
+	{
+		hpText.text = health.ToString();
 	}
     public void TakeDamage(int damage) 
     {

@@ -1,9 +1,6 @@
 # TODO
 
 - player in front of or behind enemies
-- start over
-- continue with increased difficulty 
-- increase enemies health and speed
 - instantiate enemies randomely
 - drop health items
 - choose to continue with +100 health, more attack power, more defense 
@@ -26,3 +23,6 @@
 - transition to next stage
 - HP player
 - menu UI continue button
+- start over
+- continue with increased difficulty 
+- increase enemies health and speed

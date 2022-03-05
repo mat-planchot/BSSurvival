@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame ()
     {
         NextLevel.hasWin = false;
+        BulletLaser.damageStatic = 30;
+        Enemy.healthStatic = 100;
         SceneManager.LoadScene(1);
     }
     public void ContinueGame ()

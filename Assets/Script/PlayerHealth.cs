@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 300;
-	public static int healthStatic;
+	public static int healthStatic = 300;
 
     public GameObject deathEffect;
 	public Text hpText;

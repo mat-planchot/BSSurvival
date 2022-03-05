@@ -7,6 +7,7 @@ public class BulletLaser : MonoBehaviour
     public float speed = -10f;
     public Rigidbody2D rb;
     public int damage = 30;
+    public static int damageStatic = 30;
     public GameObject impactEffect;
 
     // Start is called before the first frame update
@@ -14,9 +15,7 @@ public class BulletLaser : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
         if (NextLevel.hasWin) {
-            damage += 5;
-        } else if (!NextLevel.hasWin) {
-            damage = 30;
+            damage = damageStatic;
         }
     }
 

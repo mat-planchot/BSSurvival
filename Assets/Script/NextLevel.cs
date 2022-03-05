@@ -15,6 +15,8 @@ public class NextLevel : MonoBehaviour
                 SceneManager.LoadScene(0);
             } else {
                 NextLevel.hasWin = true;
+                BulletLaser.damageStatic += 5;
+			    Enemy.healthStatic += 10;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
             }
         }
