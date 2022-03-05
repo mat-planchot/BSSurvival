@@ -13,6 +13,11 @@ public class BulletAcid : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.up * speed;
+        if (NextLevel.hasWin) {
+            damage += 5;
+        } else if (!NextLevel.hasWin) {
+            damage = 30;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {

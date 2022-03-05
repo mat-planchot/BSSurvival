@@ -11,9 +11,10 @@ public class NextLevel : MonoBehaviour
         PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
         if (player != null) {
             if (SceneManager.GetActiveScene().name == "SecondScene") {
-                hasWin = true;
+                NextLevel.hasWin = true;
                 SceneManager.LoadScene(0);
             } else {
+                NextLevel.hasWin = true;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
             }
         }

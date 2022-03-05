@@ -7,9 +7,16 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 300;
+	public static int healthStatic;
 
     public GameObject deathEffect;
 	public Text hpText;
+
+	void Start() {
+		if (NextLevel.hasWin) {
+			health = healthStatic;
+		}
+	}
 
 	void Update() 
 	{
@@ -18,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage) 
     {
         health -= damage;
+		healthStatic = health;
         StartCoroutine(DamageAnimation());
         if (health <= 0) {
             Die();
@@ -30,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
         Destroy(clone, 0.6f);
         Destroy(gameObject);
 		NextLevel.hasWin = false;
+		healthStatic = 300;
 		SceneManager.LoadScene(0);
     }
 

@@ -13,6 +13,11 @@ public class BulletLaser : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        if (NextLevel.hasWin) {
+            damage += 5;
+        } else if (!NextLevel.hasWin) {
+            damage = 30;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {

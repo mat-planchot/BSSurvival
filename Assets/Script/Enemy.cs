@@ -11,6 +11,14 @@ public class Enemy : MonoBehaviour
     public float attackRange;
     public LayerMask attackMask;
 
+    void Start() {
+		if (NextLevel.hasWin) {
+			health += 10;
+            attackDamage += 5;
+		} else if (!NextLevel.hasWin) {
+            attackDamage = 40;
+        }
+	}
     public void TakeDamage(int damage) 
     {
         health -= damage;
